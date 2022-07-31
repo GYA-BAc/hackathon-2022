@@ -8,6 +8,10 @@ export default function Messaging() {
     const navigate = useNavigate()
 
     useEffect(() => {
+        if (localStorage.getItem("current") === null) {
+          navigate('/signin')
+          return
+        }
         const storedMessages = JSON.parse(localStorage.getItem("messages"))
         if (storedMessages) setMessages(storedMessages)
 

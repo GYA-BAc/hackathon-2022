@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/NavBar';
+import SideBar from './components/SideBar';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages'
 import Links from './pages/links'
@@ -12,6 +13,7 @@ import Messaging from './pages/messaging'
 function App() {
   return (
     <>
+    <SideBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
     <Router>
       <Navbar />
       <Routes>
